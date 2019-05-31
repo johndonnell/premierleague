@@ -1,0 +1,50 @@
+{
+  "name": "premier-league",
+  "version": "1.0.0",
+  "description": "Application that takes premier league season results and outputs the table",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:lint && npm run test:unit && npm audit",
+    "test:unit": "nyc --reporter=text --reporter=html jasmine",
+    "test:lint": "eslint ./index.js",
+    "dev:start": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "Premier",
+    "League",
+    "javascript",
+    "nodeJS"
+  ],
+  "author": "John O'Donnell",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "jasmine": "^3.4.0",
+    "nodemon": "^1.19.1",
+    "nyc": "^14.1.1"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "per-file": true,
+    "lines": 90,
+    "statements": 90,
+    "functions": 90,
+    "branches": 90,
+    "include": [
+      "**/*.js"
+    ],
+    "exclude": [
+      "**/*.spec.js"
+    ],
+    "ignore-class-method": "methodToIgnore",
+    "reporter": [
+      "cobertura"
+    ],
+    "extension": [
+      ".js"
+    ],
+    "all": false,
+    "report-dir": "./reports/unit/"
+  }
+}
