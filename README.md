@@ -2,6 +2,10 @@
 
 Written in node 10.15.0 latest LTS version.
 
+Install nvm following instructions from https://github.com/nvm-sh/nvm
+
+then ```nvm install 10.15.0``` and ```nvm use 10.15.0```
+
 ```npm i``` then
 
 ```npm start``` to run app
